@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <title>First p5.js project</title>
+</head>
+
+<body>
+    <center>
+    <div>
+        <label>First p5.js project</label>
+        <br><br>
+        <button onclick="take_snapshot()">Take Snapshot</button>
+
+    </div>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            color: crimson;
+        }
+        canvas{
+            border: 5px;
+            border-color: black;
+            border-style: groove;
+            background-color: cornsilk;
+            
+        }
+        button{
+            width: 90;
+            height: 50;
+            background-color: darkkhaki;
+            box-shadow: 5px 5px 18px red;
+        }
+        label{
+            box-shadow: 5px 5px 18px greenyellow;
+        }
+        
+    </style>
+    <script>function preload() {
+
+        }
+
+        function setup() {
+            canvas = createCanvas(680, 480);
+            canvas.position(150, 150);
+            video = createCapture(VIDEO);
+            video.hide();
+        }
+
+        function draw() {
+            image(video, 60, 60, 560, 360);
+
+            fill(255, 0, 0);
+            stroke(255, 0, 0);
+            circle(30, 30, 40);
+            circle(650, 30, 40);
+            circle(650, 440, 40);
+            circle(30, 440, 40);
+
+            fill(0, 128, 0);
+            stroke(0, 128, 0);
+            rect(50, 25, 580, 20);
+            rect( 50, 435, 580, 20);
+            rect( 20, 50, 20, 372);
+            rect( 640, 50, 20, 372);
+            
+    
+        }
+
+        function take_snapshot() {
+            save("Rish10Rash18");
+        }</script>
+    <br><br><br><br><br></center>
+</body>
+
+</html>
